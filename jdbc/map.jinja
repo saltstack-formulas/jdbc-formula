@@ -1,0 +1,32 @@
+{% set jdbc = salt['grains.filter_by']({
+    'Debian': {
+        'postgresql': 'libpostgresql-jdbc-java',
+        'postgresql_jdbc': 'postgresql.jar',
+        'mysql': 'libmysql-java',
+        'mysql_jdbc': 'mysql.jar',
+    },
+    'Ubuntu': {
+        'postgresql': 'libpostgresql-jdbc-java',
+        'postgresql_jdbc': 'postgresql.jar',
+        'mysql': 'libmysql-java',
+        'mysql_jdbc': 'mysql.jar',
+    },
+    'RedHat': {
+        'postgresql': 'postgresql-jdbc',
+        'postgresql_jdbc': 'postgresql.jar',
+        'mysql': 'mysql-connector-java',
+        'mysql_jdbc': 'mysql.jar',
+    },
+    'openSUSE': {
+        'postgresql': 'postgresql-jdbc',
+        'postgresql_jdbc': 'postgresql-jdbc.jar',
+        'mysql': 'mysql-connector-java',
+        'mysql_jdbc': 'mysql-connector-java.jar',
+    },
+    'FreeBSD': {
+        'postgresql': 'postgresql-jdbc',
+        'postgresql_jdbc': 'postgresql-jdbc.jar',
+        'mysql': 'mysql-connector-java',
+        'mysql_jdbc': 'mysql.jar',
+    },
+}, merge=salt['pillar.get']('jdbc:lookup')) %}
