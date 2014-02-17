@@ -16,12 +16,12 @@ Available states
     :local:
 
 ``jdbc.mysql``
------------------
+--------------
 
 Installs the mysql jdbc.
 
 ``jdbc.postgresql``
------------------
+-------------------
 
 Installs the postgresql jdbc.
 
