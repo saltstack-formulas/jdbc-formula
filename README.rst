@@ -26,6 +26,6 @@ Installs the mysql jdbc.
 Installs the postgresql jdbc.
 
 Formula Dependencies
---------------------
+====================
 
 * java
